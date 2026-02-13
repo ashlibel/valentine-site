@@ -1,0 +1,91 @@
+<!-- =========================
+index.html
+Keep this structure:
+valentine-site/
+  index.html
+  styles.css
+  script.js
+  assets/
+    images/
+      f1.png f2.png f3.png f4.png
+    videos/
+      bg.mp4
+    audio/
+      bestpart.mp3
+========================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentine 💗</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lavishly+Yours&family=Lexend+Giga:wght@100..900&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Background video layer -->
+  <div class="bg-layer" aria-hidden="true">
+    <video class="bg-video" autoplay muted loop playsinline preload="auto">
+      <source src="assets/videos/bg.mp4" type="video/mp4" />
+    </video>
+    <div class="bg-overlay"></div>
+  </div>
+
+  <main class="wrap">
+    <section class="window" aria-label="Valentine fake browser">
+
+      <!-- Fake browser top bar -->
+      <div class="windowTop">
+        <div class="dots" aria-hidden="true">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+
+        <div class="windowTitle lexend">tequeiromucho.mwah</div>
+
+        <!-- ONE audio button on the right -->
+        <button class="audioBtn lexend" id="audioBtn" type="button">♡ play music</button>
+      </div>
+
+      <!-- Decorative border text (top + bottom) -->
+      <div class="borderText borderTop" aria-hidden="true">
+        ꨄ︎✰ ♡★: ྀིྀི 𝜗𝜚 𐙚 ౨ৎ ୨୧˖*°࿐ *ੈ✩‧₊˚ ✧˖*°࿐ ❝ ❞ ✧ ೃ༄ ｡･:*˚:✧｡➶ ❁۪ ｡˚ ✧⊹₊˚⋅:༒ 𖤐:⋆𐙚₊˚౨ৎ୨୧ 𓆩𓆪☆˙∘𓍯⊹☾꒷𓍼‧₊˚⋅ ☆˙ .‧₊˚༺☆༻*ੈ
+      </div>
+      <div class="borderText borderBottom" aria-hidden="true">
+        ꨄ︎✰ ♡★: ྀིྀི 𝜗𝜚 𐙚 ౨ৎ ୨୧˖*°࿐ *ੈ✩‧₊˚ ✧˖*°࿐ ❝ ❞ ✧ ೃ༄ ｡･:*˚:✧｡➶ ❁۪ ｡˚ ✧⊹₊˚⋅:༒ 𖤐:⋆𐙚₊˚౨ৎ୨୧ 𓆩𓆪☆˙∘𓍯⊹☾꒷𓍼‧₊˚⋅ ☆˙ .‧₊˚༺☆༻*ੈ
+      </div>
+
+      <!-- Flowers (f1–f4 only, bottom + bigger) -->
+      <img class="flower f1" src="assets/images/f1.png" alt="flower" />
+      <img class="flower f2" src="assets/images/f2.png" alt="flower" />
+      <img class="flower f3" src="assets/images/f3.png" alt="flower" />
+      <img class="flower f4" src="assets/images/f4.png" alt="flower" />
+
+      <!-- Main content -->
+      <div class="windowBody">
+        <div class="date homemade">February 14th, 2026</div>
+
+        <h1 class="title monsieur">
+          <span id="typed"></span><span class="caret" aria-hidden="true">|</span>
+        </h1>
+
+        <p class="sub lexend">from me to you 💗</p>
+
+        <button class="btn lexend" id="retypeBtn" type="button">replay typing ✨</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Audio (plays only when button clicked) -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/audio/bestpart.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
